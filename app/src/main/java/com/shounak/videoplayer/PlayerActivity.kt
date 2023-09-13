@@ -136,6 +136,7 @@ class PlayerActivity : AppCompatActivity(), AudioManager.OnAudioFocusChangeListe
         }catch (e: Exception){Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show()}
     }
 
+    @SuppressLint("PrivateResource")
     private fun initializeLayout() {
         when (intent.getStringExtra("class")) {
             "AllVideos" -> {
@@ -175,7 +176,9 @@ class PlayerActivity : AppCompatActivity(), AudioManager.OnAudioFocusChangeListe
         else findViewById<ImageButton>(R.id.repeatBtn).setImageResource(R.drawable.exo_controls_repeat_off)
     }
 
-    @SuppressLint("SetTextI18n", "SourceLockedOrientationActivity")
+    @SuppressLint("SetTextI18n", "SourceLockedOrientationActivity", "SuspiciousIndentation",
+        "PrivateResource"
+    )
     private fun initializeBinding() {
 
         val playerView = findViewById<PlayerView>(R.id.playerView)

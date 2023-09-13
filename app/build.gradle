@@ -4,15 +4,15 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 34
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.shounak.videoplayer"
         minSdk 21
-        targetSdk 32
+        targetSdk 34
         versionCode 2
-        versionName "1.0.1"
+        versionName "1.0.6"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -35,6 +35,7 @@ android {
     buildFeatures{
         viewBinding true
     }
+    namespace 'com.shounak.videoplayer'
 }
 
 dependencies {
@@ -44,6 +45,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.5.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.core:core-ktx:+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
